@@ -1,17 +1,22 @@
 version: '3'
 services:
-  postgres-a:
+  a:
     image: postgres:13-alpine
     container_name: "postgres-alpine"
     environment:
-      - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=test_user
+      - POSTGRES_PASSWORD=Password!
+      - POSTGRES_DB=test_db
     ports:
       - 15432:5432
 
-  postgres-b:
+  b:
     image: postgres:13-alpine
     container_name: "postgres-bullseye"
     environment:
-      - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=test_user
+      - POSTGRES_PASSWORD=Password!
+      - POSTGRES_DB=test_db
     ports:
       - 15433:5432
+

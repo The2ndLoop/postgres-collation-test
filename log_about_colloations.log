@@ -1,0 +1,11 @@
+postgres-alpine    | The database cluster will be initialized with locale "en_US.utf8".
+postgres-alpine    | The default database encoding has accordingly been set to "UTF8".
+postgres-alpine    | The default text search configuration will be set to "english".
+
+postgres-bullseye  | The database cluster will be initialized with locale "en_US.utf8".
+postgres-bullseye  | The default database encoding has accordingly been set to "UTF8".
+postgres-bullseye  | The default text search configuration will be set to "english".
+
+same
+
+SELECT collname, collcollate FROM pg_collation;
